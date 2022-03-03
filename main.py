@@ -1,5 +1,13 @@
-# 7
-n = int(input('구구단을 출력할 숫자를 입력하세요(2~9): '))
+# 8
+f = open('abc.txt', 'r')
+lines = f.readlines()
+f.close()
 
-for i in range(1, 10):
-    print(n*i, end=' ')
+lines.reverse()
+
+f = open('abc.txt', 'w')
+for line in lines:
+    line = line.strip()
+    f.write(line)
+    f.write('\n')
+f.close()
