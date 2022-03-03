@@ -1,18 +1,17 @@
-# 13
-# 11, 12는 코드작성 없는 문제이므로 추가하지 않았음
+# 14
+data = input()
+_c = data[0]    #반복중인 문자
+result = data[0]
+cnt = 0
+for c in data:
+    if c != _c:
+        result += str(cnt)
+        result += c
+        cnt = 1
+        _c = c
+    else:
+        cnt += 1
 
-def DashInsert(numbers):
-    result = []
-    for i in range(len(numbers)):
-        result.append(str(numbers[i]))
-        if i == len(numbers) - 1: break
-        if numbers[i] % 2 == 0:
-            if numbers[i + 1] % 2 == 0: result.append('*')
-        else:
-            if numbers[i + 1] % 2 == 1: result.append('-')
-    result = ''.join(result)
-    return result
+result += str(cnt)
 
-
-numbers = list(map(int, input()))
-print(DashInsert(numbers))
+print(result)
