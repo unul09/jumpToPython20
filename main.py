@@ -1,5 +1,12 @@
-# 4
-# 3번은 코드작성문제가 아니라 제외했음
-A = [20, 55, 67, 82, 45, 33, 90, 87, 100, 25]
-Asum = sum(filter(lambda x: x > 50, A))
-print(Asum)
+# 5
+n = int(input())
+
+fibo1 = 0
+fibo2 = 1
+print(fibo1, end=' ')
+
+while fibo2 <= n:
+    print(fibo2, end=' ')
+    temp = fibo1
+    fibo1 = fibo2
+    fibo2 = fibo2 + temp
