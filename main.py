@@ -1,17 +1,12 @@
 # 14
-data = input()
-_c = data[0]    #반복중인 문자
-result = data[0]
-cnt = 0
-for c in data:
-    if c != _c:
-        result += str(cnt)
-        result += c
-        cnt = 1
-        _c = c
+a = str(input("압축할 문자열 입력 : ")) + ' '
+print(a)
+b = ''
+count = 1
+for i in range(len(a) - 1):
+    if a[i] == a[i + 1]:
+        count += 1
     else:
-        cnt += 1
-
-result += str(cnt)
-
-print(result)
+        b += a[i] + str(count)
+        count = 1
+print(b)
