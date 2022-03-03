@@ -1,14 +1,18 @@
-# 9
-f = open('sample.txt')
-lines = f.readlines()
-f.close()
+# 10
 
-total = 0
-for line in lines:
-    score = int(line)
-    total += score
-avg = total / len(lines)
+class Calculator:
+    def __init__(self, numList):
+        self.numList = numList
 
-f = open('result.txt', 'w')
-f.write(str(avg))
-f.close()
+    def sum(self):
+        result = sum(self.numList)
+        return result
+
+    def avg(self):
+        result = sum(self.numList) / len(self.numList)
+        return result
+
+
+cal1 = Calculator([1, 2, 3, 4])
+print(cal1.sum())
+print(cal1.avg())
