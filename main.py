@@ -1,13 +1,14 @@
-# 8
-f = open('abc.txt', 'r')
+# 9
+f = open('sample.txt')
 lines = f.readlines()
 f.close()
 
-lines.reverse()
-
-f = open('abc.txt', 'w')
+total = 0
 for line in lines:
-    line = line.strip()
-    f.write(line)
-    f.write('\n')
+    score = int(line)
+    total += score
+avg = total / len(lines)
+
+f = open('result.txt', 'w')
+f.write(str(avg))
 f.close()
